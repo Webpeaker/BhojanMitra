@@ -36,6 +36,7 @@ const Navbar = () => {
         </ul>
 
         <div className="navbar-actions">
+          <a href="/experience" className="btn-nav-demo">🚀 Live Demo</a>
           <a href="#pricing" className="btn-nav-outline">Free Trial</a>
           <a href="#contact" className="btn-nav-primary">
             <span>Get Started</span>
@@ -57,6 +58,7 @@ const Navbar = () => {
           {navLinks.map(link => (
             <a key={link.label} href={link.href} onClick={() => setMenuOpen(false)}>{link.label}</a>
           ))}
+          <a href="/experience" className="mobile-demo-link" onClick={() => setMenuOpen(false)}>🚀 Live Demo</a>
           <a href="#contact" className="mobile-cta">Get Started Free</a>
         </div>
       )}

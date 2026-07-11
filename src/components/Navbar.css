@@ -227,3 +227,32 @@
   .navbar-actions { display: none; }
   .hamburger { display: flex; }
 }
+
+/* ── Demo Button ─────────────────────────────────── */
+.btn-nav-demo {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #E8541A, #c44010);
+  border-radius: 999px;
+  transition: all 0.2s;
+  box-shadow: 0 0 16px rgba(232,84,26,0.4);
+  white-space: nowrap;
+  text-decoration: none;
+}
+.btn-nav-demo:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 28px rgba(232,84,26,0.6);
+  color: #fff;
+}
+.mobile-demo-link {
+  display: block;
+  padding: 12px 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #E8541A !important;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(232,84,26,0.15);
+}

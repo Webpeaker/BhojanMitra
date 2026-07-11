@@ -238,3 +238,27 @@
 @media (max-width: 600px) {
   .hero-stats { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* ── Demo CTA Button ─────────────────────────────── */
+.btn-demo-hero {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(232,84,26,0.12);
+  border: 2px solid rgba(232,84,26,0.5);
+  color: #E8541A;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all 0.25s;
+  box-shadow: 0 0 20px rgba(232,84,26,0.15);
+}
+.btn-demo-hero:hover {
+  background: #E8541A;
+  color: #fff;
+  box-shadow: 0 0 32px rgba(232,84,26,0.4);
+  transform: translateY(-2px);
+}

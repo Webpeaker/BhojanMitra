@@ -56,6 +56,10 @@ const Hero = () => {
               <FaGift size={15} />
               <span>Start Free Trial</span>
             </a>
+            <a href="/experience" className="btn-demo-hero">
+              <FaRocket size={15} />
+              <span>Try Live Demo</span>
+            </a>
             <a href="#features" className="btn-secondary-hero">
               <FaPlayCircle size={18} />
               <span>See How It Works</span>
