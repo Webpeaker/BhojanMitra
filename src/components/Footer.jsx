@@ -63,6 +63,7 @@ const Footer = () => {
             <p className="footer-desc">
               World's most affordable and complete restaurant ordering system. Trusted by 100+ restaurants across 40+ countries.
             </p>
+            {/* Social media icons — hidden for now, uncomment when links are ready
             <div className="footer-socials">
               {socials.map(s => (
                 <a key={s.label} href={s.href} className="social-link" aria-label={s.label} target="_blank" rel="noopener noreferrer">
@@ -70,6 +71,7 @@ const Footer = () => {
                 </a>
               ))}
             </div>
+            */}
 
             <div className="footer-contact-info">
               <a href="mailto:bhojanMitra@webpeaker.com" className="footer-contact-link">
