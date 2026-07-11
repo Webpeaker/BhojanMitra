@@ -33,7 +33,10 @@ const Preloader = ({ onComplete }) => {
         {/* Logo + brand */}
         <div className="pre-logo-wrap">
           <div className="pre-logo-ring" />
-          <img src="/logo.png" alt="BhojanMitra" className="pre-logo-img" />
+          <picture>
+            <source srcSet="/logo.webp" type="image/webp" />
+            <img src="/logo.png" alt="BhojanMitra" className="pre-logo-img" loading="eager" fetchPriority="high" />
+          </picture>
         </div>
 
         <h1 className="pre-brand">BhojanMitra</h1>

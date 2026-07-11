@@ -66,11 +66,17 @@ const HowItWorks = () => {
 
           <div className="hiw-visual">
             <div className="hiw-img-wrap">
-              <img
-                src="/interior.png"
-                alt="Modern restaurant interior with BhojanMitra POS"
-                className="hiw-restaurant-img"
-              />
+              <picture>
+                <source srcSet="/interior.webp" type="image/webp" />
+                <img
+                  src="/interior.png"
+                  alt="Modern restaurant interior with BhojanMitra POS"
+                  className="hiw-restaurant-img"
+                  loading="lazy"
+                  width="560"
+                  height="400"
+                />
+              </picture>
               <div className="hiw-badge hiw-badge-1">
                 <FaBolt size={18} color="#F5A623" />
                 <div>

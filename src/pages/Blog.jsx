@@ -1,3 +1,7 @@
+import {
+  FaChartBar, FaMobileAlt, FaMoneyBillWave, FaGlobe,
+  FaCogs, FaFileInvoiceDollar, FaNewspaper, FaEnvelope
+} from 'react-icons/fa';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import './LegalPage.css';
@@ -5,7 +9,7 @@ import './Blog.css';
 
 const posts = [
   {
-    id: 1, emoji: '📊',
+    id: 1, icon: <FaChartBar />,
     category: 'Tips & Tricks',
     date: 'July 10, 2026',
     readTime: '5 min read',
@@ -14,7 +18,7 @@ const posts = [
     featured: true,
   },
   {
-    id: 2, emoji: '📱',
+    id: 2, icon: <FaMobileAlt />,
     category: 'Product Update',
     date: 'July 5, 2026',
     readTime: '3 min read',
@@ -22,7 +26,7 @@ const posts = [
     desc: 'Our biggest release yet — guest-facing QR menus, live kitchen display, and a brand new analytics module with daily profit reports.',
   },
   {
-    id: 3, emoji: '💰',
+    id: 3, icon: <FaMoneyBillWave />,
     category: 'Business Growth',
     date: 'June 28, 2026',
     readTime: '7 min read',
@@ -30,7 +34,7 @@ const posts = [
     desc: 'A real case study from a 3-outlet café chain in Dubai. Learn exactly what changed and how digital ordering transformed their bottom line.',
   },
   {
-    id: 4, emoji: '🌍',
+    id: 4, icon: <FaGlobe />,
     category: 'Global Expansion',
     date: 'June 20, 2026',
     readTime: '4 min read',
@@ -38,15 +42,15 @@ const posts = [
     desc: 'With multi-currency support now live in BhojanMitra, restaurants in 40+ countries can now invoice guests in their local currency.',
   },
   {
-    id: 5, emoji: '🤖',
+    id: 5, icon: <FaCogs />,
     category: 'Technology',
     date: 'June 14, 2026',
     readTime: '6 min read',
-    title: 'How AI Menu Suggestions Helped One Restaurant Increase Average Order Value',
-    desc: 'Smart upselling powered by purchase history and weather data — here\'s how one restaurant added $8 to every average order.',
+    title: 'How Smart Suggestions Helped One Restaurant Increase Average Order Value',
+    desc: 'Smart upselling powered by purchase history — here\'s how one restaurant added $8 to every average order.',
   },
   {
-    id: 6, emoji: '📋',
+    id: 6, icon: <FaFileInvoiceDollar />,
     category: 'Guide',
     date: 'June 5, 2026',
     readTime: '8 min read',
@@ -65,7 +69,9 @@ const Blog = () => {
       <div className="static-page">
         <div className="static-hero">
           <div className="container">
-            <div className="static-hero-tag">📰 Insights</div>
+            <div className="static-hero-tag">
+              <FaNewspaper size={12} /> Insights
+            </div>
             <h1 className="static-hero-title">The BhojanMitra <span>Blog</span></h1>
             <p className="static-hero-desc">
               Restaurant tips, product updates, growth strategies, and real stories from the kitchen floor.
@@ -79,7 +85,7 @@ const Blog = () => {
             {/* Featured Post */}
             {featured && (
               <div className="blog-featured">
-                <div className="blog-featured-emoji">{featured.emoji}</div>
+                <div className="blog-featured-icon">{featured.icon}</div>
                 <div className="blog-featured-body">
                   <div className="blog-meta">
                     <span className="blog-cat">{featured.category}</span>
@@ -89,7 +95,7 @@ const Blog = () => {
                   </div>
                   <h2>{featured.title}</h2>
                   <p>{featured.desc}</p>
-                  <a href="#" className="btn-primary"><span>Read Article →</span></a>
+                  <a href="#" className="btn-primary"><span>Read Article</span></a>
                 </div>
               </div>
             )}
@@ -98,7 +104,7 @@ const Blog = () => {
             <div className="blog-grid">
               {rest.map(post => (
                 <article key={post.id} className="blog-card">
-                  <div className="blog-card-emoji">{post.emoji}</div>
+                  <div className="blog-card-icon">{post.icon}</div>
                   <div className="blog-meta">
                     <span className="blog-cat">{post.category}</span>
                     <span>{post.readTime}</span>
@@ -112,7 +118,8 @@ const Blog = () => {
 
             {/* Newsletter */}
             <div className="blog-newsletter">
-              <h3>📬 Get weekly restaurant insights</h3>
+              <FaEnvelope size={28} className="blog-nl-icon" />
+              <h3>Get weekly restaurant insights</h3>
               <p>Join 2,000+ restaurant owners who read our newsletter every Monday.</p>
               <div className="blog-nl-form">
                 <input type="email" placeholder="your@email.com" />

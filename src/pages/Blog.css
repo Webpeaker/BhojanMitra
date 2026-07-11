@@ -13,15 +13,16 @@
   color: #fff;
 }
 
-.blog-featured-emoji {
-  font-size: 80px;
+.blog-featured-icon {
+  font-size: 40px;
   flex-shrink: 0;
-  background: rgba(255,255,255,0.05);
+  background: rgba(255,255,255,0.08);
   border-radius: var(--radius-xl);
-  width: 140px; height: 140px;
+  width: 120px; height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--accent-light);
 }
 
 .blog-featured-body h2 {
@@ -65,10 +66,11 @@
   border-color: var(--border-dark);
 }
 
-.blog-card-emoji {
-  font-size: 36px;
-  display: block;
+.blog-card-icon {
+  font-size: 28px;
+  color: var(--primary);
   margin-bottom: 4px;
+  display: block;
 }
 
 .blog-meta {
@@ -124,6 +126,12 @@
   border-radius: var(--radius-xl);
   padding: 44px;
   text-align: center;
+}
+
+.blog-nl-icon {
+  color: var(--primary);
+  margin-bottom: 8px;
+  display: block;
 }
 
 .blog-newsletter h3 {

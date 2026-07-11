@@ -18,7 +18,7 @@ const Hero = () => {
           <div className="hero-badge">
             <span className="badge-dot"></span>
             <FaGlobe size={12} />
-            <span>Trusted by 800+ Restaurants Worldwide</span>
+            <span>Trusted by 100+ Restaurants Worldwide</span>
           </div>
 
           <h1 className="hero-title">
@@ -38,7 +38,7 @@ const Hero = () => {
 
           <div className="hero-stats">
             {[
-              { value: '800+', label: 'Restaurants', icon: <FaUsers size={18} /> },
+              { value: '100+', label: 'Restaurants', icon: <FaUsers size={18} /> },
               { value: '4.8', label: 'Star Rating', icon: <FaStar size={18} /> },
               { value: '1 Month', label: 'Free Trial', icon: <FaGift size={18} /> },
               { value: '$2/mo', label: 'Starting', icon: <FaDollarSign size={18} /> },
@@ -68,19 +68,29 @@ const Hero = () => {
 
           <div className="hero-trust">
             <div className="trust-avatars">
-              <img src="/owner.png" alt="Restaurant owner" className="trust-img" />
+              <picture>
+                <source srcSet="/owner.webp" type="image/webp" />
+                <img src="/owner.png" alt="Restaurant owner" className="trust-img" loading="eager" fetchPriority="high" />
+              </picture>
             </div>
-            <p><strong>500+ new restaurants</strong> joined this month</p>
+            <p><strong>New restaurants</strong> joining every week</p>
           </div>
         </div>
 
         <div className="hero-right">
           <div className="hero-img-wrap">
-            <img
-              src="/dashboard.png"
-              alt="BhojanMitra Restaurant POS Dashboard"
-              className="hero-dashboard-img"
-            />
+            <picture>
+              <source srcSet="/dashboard.webp" type="image/webp" />
+              <img
+                src="/dashboard.png"
+                alt="BhojanMitra Restaurant POS Dashboard"
+                className="hero-dashboard-img"
+                loading="eager"
+                fetchPriority="high"
+                width="600"
+                height="420"
+              />
+            </picture>
             <div className="floating-badge badge-pos">
               <div className="fb-icon-wrap">
                 <FaCheckCircle color="#22C55E" size={22} />

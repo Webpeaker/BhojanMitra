@@ -28,7 +28,10 @@ const Contact = () => {
             </p>
 
             <div className="contact-image-wrap">
-              <img src="/owner.png" alt="Happy restaurant owner using BhojanMitra" className="contact-owner-img" />
+              <picture>
+                <source srcSet="/owner.webp" type="image/webp" />
+                <img src="/owner.png" alt="Happy restaurant owner using BhojanMitra" className="contact-owner-img" loading="lazy" />
+              </picture>
             </div>
 
             <div className="contact-benefits">

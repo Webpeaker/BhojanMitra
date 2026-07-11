@@ -55,7 +55,10 @@ const Footer = () => {
         <div className="container footer-top-inner">
           <div className="footer-brand">
             <div className="footer-logo">
-              <img src="/logo.png" alt="BhojanMitra" className="footer-logo-img" />
+              <picture>
+                <source srcSet="/logo.webp" type="image/webp" />
+                <img src="/logo.png" alt="BhojanMitra" className="footer-logo-img" loading="lazy" />
+              </picture>
             </div>
             <p className="footer-desc">
               World's most affordable and complete restaurant ordering system. Trusted by 100+ restaurants across 40+ countries.
@@ -119,7 +122,10 @@ const Footer = () => {
         </div>
         <div className="footer-powered">
           <span>Powered by</span>
-          <img src="/webpeaker.png" alt="Webpeaker" className="webpeaker-logo" />
+          <picture>
+            <source srcSet="/webpeaker.webp" type="image/webp" />
+            <img src="/webpeaker.png" alt="Webpeaker" className="webpeaker-logo" loading="lazy" />
+          </picture>
         </div>
       </div>
     </footer>
