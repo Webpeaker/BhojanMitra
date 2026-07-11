@@ -19,7 +19,7 @@ const restaurantTypes = [
 ];
 
 const statsData = [
-  { value: '800+', label: 'Restaurants Worldwide', icon: <FaStore size={22} /> },
+  { value: '100+', label: 'Restaurants Worldwide', icon: <FaStore size={22} /> },
   { value: '$2M+', label: 'Processed Monthly', icon: <FaDollarSign size={22} /> },
   { value: '40+', label: 'Countries', icon: <FaGlobe size={22} /> },
   { value: '99.9%', label: 'Uptime SLA', icon: <FaBolt size={22} /> },

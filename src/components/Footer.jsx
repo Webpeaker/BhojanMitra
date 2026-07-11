@@ -8,10 +8,38 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   const links = {
-    Product: ['Features', 'Pricing', 'QR Ordering', 'KOT Printing', 'GST Billing', 'WhatsApp Marketing'],
-    Solutions: ['Fine Dining', 'Cafés & Bakeries', 'Cloud Kitchens', 'QSRs', 'Food Trucks', 'Multi-Outlet Chains'],
-    Company: ['About Us', 'Blog', 'Careers', 'Press Kit', 'Partner Program', 'Affiliate'],
-    Support: ['Help Center', 'Documentation', 'Video Tutorials', 'Contact Us', 'System Status', 'Terms & Privacy'],
+    Product: [
+      { label: 'Features', href: '/#features' },
+      { label: 'Pricing', href: '/#pricing' },
+      { label: 'QR Ordering', href: '/#features' },
+      { label: 'KOT Printing', href: '/#features' },
+      { label: 'GST Billing', href: '/#features' },
+      { label: 'Live Demo', href: '/experience' },
+    ],
+    Solutions: [
+      { label: 'Fine Dining', href: '/#features' },
+      { label: 'Cafés & Bakeries', href: '/#features' },
+      { label: 'Cloud Kitchens', href: '/#features' },
+      { label: 'QSRs', href: '/#features' },
+      { label: 'Food Trucks', href: '/#features' },
+      { label: 'Multi-Outlet Chains', href: '/#features' },
+    ],
+    Company: [
+      { label: 'About Us', href: '/about' },
+      { label: 'Blog', href: '/blog' },
+      { label: 'Careers', href: '/careers' },
+      { label: 'Contact Us', href: '/#contact' },
+      { label: 'Partner Program', href: '/#contact' },
+      { label: 'Press Kit', href: '/about' },
+    ],
+    Support: [
+      { label: 'Help Center', href: '/help' },
+      { label: 'Documentation', href: '/help' },
+      { label: 'Video Tutorials', href: '/help' },
+      { label: 'Privacy Policy', href: '/privacy' },
+      { label: 'Terms of Service', href: '/terms' },
+      { label: 'Refund Policy', href: '/refund' },
+    ],
   };
 
   const socials = [
@@ -30,7 +58,7 @@ const Footer = () => {
               <img src="/logo.png" alt="BhojanMitra" className="footer-logo-img" />
             </div>
             <p className="footer-desc">
-              World's most affordable and complete restaurant ordering system. Trusted by 800+ restaurants in 40+ countries.
+              World's most affordable and complete restaurant ordering system. Trusted by 100+ restaurants across 40+ countries.
             </p>
             <div className="footer-socials">
               {socials.map(s => (
@@ -69,8 +97,8 @@ const Footer = () => {
                 <h4>{category}</h4>
                 <ul>
                   {items.map(item => (
-                    <li key={item}>
-                      <a href="#home">{item}</a>
+                    <li key={item.label}>
+                      <a href={item.href}>{item.label}</a>
                     </li>
                   ))}
                 </ul>
@@ -84,9 +112,9 @@ const Footer = () => {
         <div className="container footer-bottom-inner">
           <p>© {year} BhojanMitra by Webpeaker. All rights reserved. Available worldwide.</p>
           <div className="footer-bottom-links">
-            <a href="#home">Privacy Policy</a>
-            <a href="#home">Terms of Service</a>
-            <a href="#home">Refund Policy</a>
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms of Service</a>
+            <a href="/refund">Refund Policy</a>
           </div>
         </div>
         <div className="footer-powered">

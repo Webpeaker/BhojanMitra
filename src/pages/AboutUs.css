@@ -1,0 +1,324 @@
+/* ─── About Us Page CSS ─────────────────────────────────── */
+
+/* Mission Section */
+.about-mission {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.about-stat {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px 12px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.about-stat-val {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.about-stat-lab {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.about-mission-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.about-visual-card {
+  background: linear-gradient(135deg, var(--bg-dark), #2a1208);
+  border-radius: var(--radius-xl);
+  padding: 40px 32px;
+  color: #fff;
+  text-align: center;
+  max-width: 340px;
+  width: 100%;
+  border: 1px solid rgba(232,84,26,0.25);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.avc-emoji {
+  font-size: 52px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.about-visual-card h3 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.about-visual-card p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.avc-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.avc-badges span {
+  font-size: 13px;
+  color: rgba(255,255,255,0.75);
+}
+
+/* Timeline */
+.about-timeline {
+  margin-bottom: 80px;
+}
+
+.timeline-track {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.timeline-track::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0; bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--primary), var(--accent));
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: calc(50% + 24px);
+  margin-bottom: 28px;
+  position: relative;
+}
+
+.timeline-item.right {
+  justify-content: flex-start;
+  padding-right: 0;
+  padding-left: calc(50% + 24px);
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  top: 16px;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: var(--primary);
+  border: 2px solid #fff;
+  transform: translateX(-50%);
+  box-shadow: 0 0 0 4px rgba(232,84,26,0.2);
+}
+
+.timeline-card {
+  background: #fff;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  padding: 14px 18px;
+  box-shadow: var(--shadow-sm);
+  max-width: 260px;
+}
+
+.timeline-year {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.timeline-card p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Values */
+.about-values { margin-bottom: 80px; }
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.value-card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  padding: 28px 24px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-dark);
+}
+
+.value-icon {
+  font-size: 32px;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.value-card h3 {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.value-card p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Team */
+.about-team { margin-bottom: 80px; }
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.team-card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  padding: 28px 20px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.team-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.team-avatar {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 14px;
+  background: var(--bg-section-alt);
+  border-radius: 50%;
+  width: 72px; height: 72px;
+  line-height: 72px;
+  margin-left: auto; margin-right: auto;
+}
+
+.team-card h3 {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.team-card span {
+  font-size: 12px;
+  color: var(--primary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.team-card p {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-top: 12px;
+  font-style: italic;
+}
+
+/* About CTA */
+.about-cta {
+  background: linear-gradient(135deg, var(--bg-dark), #2a1208);
+  border-radius: var(--radius-xl);
+  padding: 60px 40px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.about-cta h2 {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.about-cta p {
+  color: rgba(255,255,255,0.6);
+  font-size: 16px;
+  margin-bottom: 28px;
+}
+
+.about-cta-btns {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.about-cta-btns .btn-secondary {
+  color: #fff;
+  border-color: rgba(255,255,255,0.4);
+}
+
+.about-cta-btns .btn-secondary:hover {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-mission { grid-template-columns: 1fr; gap: 32px; }
+  .about-stats { grid-template-columns: repeat(2, 1fr); }
+  .values-grid { grid-template-columns: repeat(2, 1fr); }
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .timeline-track::before { left: 20px; }
+  .timeline-item, .timeline-item.right { padding: 0 0 0 52px; justify-content: flex-start; }
+  .timeline-dot { left: 20px; }
+}
+
+@media (max-width: 580px) {
+  .values-grid { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: 1fr 1fr; }
+  .about-cta { padding: 40px 24px; }
+}

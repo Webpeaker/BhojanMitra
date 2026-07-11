@@ -1,0 +1,253 @@
+/* ─── Preloader ─────────────────────────────────────────────── */
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: var(--bg-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.preloader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* ── Background blobs ── */
+.pre-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.18;
+  pointer-events: none;
+  animation: blobPulse 4s ease-in-out infinite alternate;
+}
+
+.pre-blob-1 {
+  width: 500px; height: 500px;
+  background: var(--primary);
+  top: -150px; left: -100px;
+  animation-delay: 0s;
+}
+
+.pre-blob-2 {
+  width: 400px; height: 400px;
+  background: var(--secondary);
+  bottom: -120px; right: -80px;
+  animation-delay: 1.5s;
+}
+
+.pre-blob-3 {
+  width: 300px; height: 300px;
+  background: var(--accent);
+  top: 40%; left: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: 0.8s;
+}
+
+@keyframes blobPulse {
+  from { transform: scale(1); opacity: 0.18; }
+  to   { transform: scale(1.15); opacity: 0.28; }
+}
+
+/* ── Content ── */
+.pre-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  padding: 0 24px;
+}
+
+/* ── Logo ring ── */
+.pre-logo-wrap {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pre-logo-ring {
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: var(--primary);
+  border-right-color: var(--accent);
+  animation: spinRing 1.2s linear infinite;
+}
+
+.pre-logo-ring::after {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-bottom-color: var(--secondary-light);
+  animation: spinRing 1.8s linear infinite reverse;
+}
+
+@keyframes spinRing {
+  to { transform: rotate(360deg); }
+}
+
+.pre-logo-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 20px;
+  animation: logoPop 0.5s ease forwards;
+}
+
+@keyframes logoPop {
+  from { transform: scale(0.7); opacity: 0; }
+  to   { transform: scale(1);   opacity: 1; }
+}
+
+/* ── Brand text ── */
+.pre-brand {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 5vw, 42px);
+  font-weight: 800;
+  background: linear-gradient(135deg, #fff 30%, var(--accent-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: fadeInUp 0.5s 0.2s ease both;
+}
+
+.pre-tagline {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.04em;
+  animation: fadeInUp 0.5s 0.35s ease both;
+}
+
+/* ── Progress bar ── */
+.pre-bar-wrap {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  animation: fadeInUp 0.5s 0.5s ease both;
+}
+
+.pre-bar-track {
+  width: 100%;
+  height: 6px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+}
+
+.pre-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  border-radius: 999px;
+  transition: width 0.12s ease;
+}
+
+.pre-bar-shimmer {
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(255,255,255,0.5) 50%,
+    transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmerSlide 1.2s linear infinite;
+  transition: width 0.12s ease;
+}
+
+@keyframes shimmerSlide {
+  from { background-position: -200% 0; }
+  to   { background-position: 200% 0; }
+}
+
+.pre-percent {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent-light);
+  letter-spacing: 0.04em;
+}
+
+/* ── Dots ── */
+.pre-dots {
+  display: flex;
+  gap: 8px;
+  animation: fadeInUp 0.5s 0.65s ease both;
+}
+
+.pre-dots span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--primary-light);
+  animation: dotBounce 1.2s ease-in-out infinite;
+}
+
+.pre-dots span:nth-child(2) { animation-delay: 0.2s; background: var(--accent); }
+.pre-dots span:nth-child(3) { animation-delay: 0.4s; background: var(--secondary-light); }
+
+@keyframes dotBounce {
+  0%, 100% { transform: translateY(0); opacity: 0.6; }
+  50%       { transform: translateY(-8px); opacity: 1; }
+}
+
+/* ── Status text ── */
+.pre-status {
+  font-size: 14px;
+  color: rgba(255,255,255,0.45);
+  font-style: italic;
+  min-height: 22px;
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.5s 0.7s ease both;
+}
+
+/* ── Particles ── */
+.pre-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.pre-particle {
+  position: absolute;
+  font-size: 22px;
+  opacity: 0;
+  animation: particleFloat 6s ease-in-out infinite;
+}
+
+.pre-p1 { top: 15%; left: 8%;  animation-delay: 0s;   animation-duration: 5s; }
+.pre-p2 { top: 70%; left: 12%; animation-delay: 1s;   animation-duration: 6s; }
+.pre-p3 { top: 20%; right: 10%;animation-delay: 2s;   animation-duration: 5.5s; }
+.pre-p4 { top: 60%; right: 8%; animation-delay: 0.5s; animation-duration: 7s; }
+.pre-p5 { top: 45%; left: 5%;  animation-delay: 1.5s; animation-duration: 5s; }
+.pre-p6 { top: 80%; right: 15%;animation-delay: 2.5s; animation-duration: 6.5s; }
+
+@keyframes particleFloat {
+  0%   { opacity: 0;   transform: translateY(20px) rotate(0deg)   scale(0.7); }
+  25%  { opacity: 0.6; }
+  75%  { opacity: 0.6; }
+  100% { opacity: 0;   transform: translateY(-40px) rotate(20deg) scale(1.1); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
