@@ -48,7 +48,7 @@ const testimonials = [
     city: 'Milan, Italy',
     initials: 'MB',
     rating: 5,
-    text: 'Managing 3 outlets from one dashboard is unbelievable. The analytics show me which dishes perform best at each location. Worth every penny of the $4.99/month!',
+    text: 'Managing 3 outlets from one dashboard is unbelievable. The analytics show me which dishes perform best at each location. Worth every penny of the $2/month!',
     tag: 'Multi-Outlet',
     color: '#0EA5E9',
   },

@@ -5,7 +5,7 @@ import './FAQ.css';
 const faqs = [
   {
     q: 'How much does BhojanMitra restaurant software cost?',
-    a: 'BhojanMitra costs $4.99 per month on the Pro plan (also available at ₹399/month). We also offer an annual plan at $49/year — saving 2 months. All new restaurants get 1 month free — no credit card required.',
+    a: 'BhojanMitra costs $2 per month on the Pro plan (also available at ₹99/month). We also offer an annual plan at $20/year — saving 2 months. All new restaurants get 1 month free — no credit card required.',
   },
   {
     q: 'Does BhojanMitra work on mobile phones and tablets?',

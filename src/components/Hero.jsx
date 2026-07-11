@@ -41,7 +41,7 @@ const Hero = () => {
               { value: '800+', label: 'Restaurants', icon: <FaUsers size={18} /> },
               { value: '4.8', label: 'Star Rating', icon: <FaStar size={18} /> },
               { value: '1 Month', label: 'Free Trial', icon: <FaGift size={18} /> },
-              { value: '$4.99/mo', label: 'Starting', icon: <FaDollarSign size={18} /> },
+              { value: '$2/mo', label: 'Starting', icon: <FaDollarSign size={18} /> },
             ].map(stat => (
               <div className="hero-stat" key={stat.label}>
                 <div className="stat-icon">{stat.icon}</div>
